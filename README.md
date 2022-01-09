@@ -2,7 +2,7 @@
 Base d'un projet Angular utilisant un CRUD pour la gestion d'une base de données.
 
 ***
-# GameShop-Project
+## GameShop-Project
 
 ### Features
 
