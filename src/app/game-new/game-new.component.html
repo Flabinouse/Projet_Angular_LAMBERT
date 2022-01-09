@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Titre</label><br>
+        <input type="text" class="form-control" [(ngModel)]="game.name">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Plateforme</label><br>
+        <input type="text" class="form-control" [(ngModel)]="game.platform">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Editeur</label><br>
+        <input type="text" class="form-control" [(ngModel)]="game.editor">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Type de jeu</label><br>
+        <input type="text" class="form-control" [(ngModel)]="game.genre">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Affiche</label> <br>
+        <input type="text" class="form-control" [(ngModel)]="game.cover">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Date de sortie</label><br>
+        <input type="text" class="form-control" [(ngModel)]="game.releaseDate">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Age limite</label> <br>
+        <input type="text" class="form-control" [(ngModel)]="game.age">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="form-group">
+        <label>Description</label><br>
+        <textarea name="synopsis" cols="30" rows="10" class="form-control" [(ngModel)]="game.description"></textarea>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="submit">
+        <button class="btn btn-outline-success" (click)="add()">Envoyer</button>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,53 @@
+<li [ngClass]="{ 'list-group-item': true, 
+                'list-group-item-primary': platform === 'PC', 
+                'list-group-item-success': platform === 'XBOX',
+                'list-group-item-info': platform === 'PlayStation' }"> 
+                
+    <div class="row">
+        <div class="col-2">
+            <img [src]="cover" alt="cover" class="affiche">
+        </div>
+        <div class="col-8">
+            <div class="platform" *ngIf="platform == 'PC'">
+                <img class="platform" src="https://www.betaarchive.com/wiki/images/9/94/Pc-logo-png.png" alt="PC">
+            </div>
+            <div class="platform" *ngIf="platform == 'XBOX'">
+                <img class="platform" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg" alt="XBOX">      
+            </div>
+            <div class="platform" *ngIf="platform == 'PlayStation'">
+                <img class="platform" src="https://www.nicepng.com/png/full/10-104138_blue-playstation-logo-png-playstation-logo-no-background.png" alt="PlayStation">      
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-sm-6">
+            <h3 [ngStyle]="{color: changeColor()}">{{ name }}</h3>
+        </div>
+        <div class="col-12 col-sm-6">
+            Date de Sortie: {{ releaseDate }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-6">
+            Editeur: {{ editor }}
+            Genre: {{ genre }}
+        </div>
+        <div class="col-12 col-sm-6">
+            Age: {{ age }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-sm-6">
+            Description: {{ description }}
+        </div>
+    </div>
+    
+    <a [routerLink]="['/detail', id]" class="btn btn-outline-success">Détail</a>
+
+    <div class="col-2">
+        <a [routerLink]="['/modify', id]" class="btn btn-warning">M</a>
+        <button class="btn btn-danger" (click)="delete()">X</button>
+    </div>
+</li>
