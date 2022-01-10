@@ -1,0 +1,24 @@
+.homebody {
+    margin-top: 5%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/img/photofunky.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    font-weight: bold;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.neon {
+    box-shadow: 1px 1px 5px 8px rgb(186, 32, 224);
+}

@@ -35,18 +35,6 @@ export class GameComponent implements OnInit {
     console.log("Detail du jeu");
   }
 
-  changeColor(){
-    if(this.platform == "XBOX"){
-      return "green";
-    }
-    else if(this.platform == "PlayStation"){
-      return "blue";
-    }
-    else {
-      return "gray";
-    }
-  }
-
   delete(){
     this.Game.deleteGame(this.id);
   }

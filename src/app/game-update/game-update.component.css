@@ -7,3 +7,11 @@
     padding: 20px;
     border-radius: 10px;
 }
+
+.submit{
+    text-align: center;
+}
+
+.row{
+    margin-bottom: 20px;
+}

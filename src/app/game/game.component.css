@@ -1,6 +1,32 @@
 .affiche{
-    width: 125px;
+    width: 200px;
+    height: 200px;
 }
 .platform{
     width: 50px;
+}
+.information {
+    padding: 20px;
+}
+
+.neon-pc {
+    box-shadow: 1px 1px 5px 8px rgb(219, 143, 28);
+    background-color: rgba(255, 255, 255, 0.877);
+    color: black;
+}
+.neon-xbox {
+    box-shadow: 1px 1px 5px 8px rgb(20, 201, 14);
+    background-color: rgba(255, 255, 255, 0.877);
+}
+.neon-playstation {
+    box-shadow: 1px 1px 5px 8px rgb(14, 161, 219);
+    background-color: rgba(255, 255, 255, 0.877);
+}
+.neon-nintendo {
+    box-shadow: 1px 1px 5px 8px rgb(216, 14, 14);
+    background-color: rgba(255, 255, 255, 0.877);
+}
+
+.button-action{
+    padding: 10px;
 }

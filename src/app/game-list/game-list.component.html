@@ -1,15 +1,16 @@
 <br>
-<ul class="list-group">
-    <app-game *ngFor="let game of games; let i = index"
-    [name]="game.name"
-    [platform]="game.platform"
-    [cover]="game.cover"
-    [description]="game.description"
-    [releaseDate]="game.releaseDate"
-    [editor]="game.editor"
-    [age]="game.age"
-    [genre]="game.genre"
-    [id]="game.id"></app-game>
-</ul>
+<div class="container">
+    <div class="row">
+        <app-game class="appgame" *ngFor="let game of games; let i = index"
+        [name]="game.name"
+        [platform]="game.platform"
+        [cover]="game.cover"
+        [description]="game.description"
+        [releaseDate]="game.releaseDate"
+        [editor]="game.editor"
+        [age]="game.age"
+        [genre]="game.genre"
+        [id]="game.id"></app-game>
+    </div>
+  </div>
 <br>
-<!-- <div class="container"> -->

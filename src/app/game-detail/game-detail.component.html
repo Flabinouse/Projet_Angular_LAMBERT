@@ -1,1 +1,47 @@
-<p>game-detail works!</p>
+<div class="col-sm datadetail">
+                
+    <div class="row">
+        <div class="col-4">
+            <img [src]="game.cover" alt="cover" class="affiche">
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-12">
+                    <h1>{{ game.name }}</h1>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <b>Editeur:</b> {{ game.editor }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <b>Genre:</b> {{ game.genre }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <b>Age:</b> {{ game.age }}                 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <b>Date de Sortie:</b> {{ game.releaseDate }}
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12 col-sm-8">
+                    <b>Description:</b> {{ game.description }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <a [routerLink]="['/games']" class="btn btn-outline-success">Retour</a>
+    </div>
+
+</div>

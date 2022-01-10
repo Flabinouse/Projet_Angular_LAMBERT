@@ -10,6 +10,7 @@ Base d'un projet Angular utilisant un CRUD pour la gestion d'une base de donnée
 - Création d'un nouveau jeu
 - Modification d'un jeu
 - Suppression d'un jeu
+- Détail d'un jeu afficher sur une page
 
 ### Technologies
 

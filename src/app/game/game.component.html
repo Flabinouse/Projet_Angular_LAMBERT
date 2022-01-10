@@ -1,53 +1,58 @@
-<li [ngClass]="{ 'list-group-item': true, 
-                'list-group-item-primary': platform === 'PC', 
-                'list-group-item-success': platform === 'XBOX',
-                'list-group-item-info': platform === 'PlayStation' }"> 
+<div class="col-sm" [ngClass]="{'neon-pc': true, 
+                                'neon-xbox': platform.toUpperCase() === 'XBOX',
+                                'neon-playstation': platform.toUpperCase() === 'PLAYSTATION',
+                                'neon-nintendo': platform.toUpperCase() === 'NINTENDO'}">
                 
     <div class="row">
-        <div class="col-2">
+        <div class="col-4">
             <img [src]="cover" alt="cover" class="affiche">
         </div>
-        <div class="col-8">
-            <div class="platform" *ngIf="platform == 'PC'">
-                <img class="platform" src="https://www.betaarchive.com/wiki/images/9/94/Pc-logo-png.png" alt="PC">
+        <div class="col-8 information">
+            <div class="row">
+                <div class="col-8">
+                    <h3>{{ name }}</h3>
+                </div>
+                <div class="col-4">
+                    <div class="platform float-end" *ngIf="platform.toUpperCase() == 'PC'">
+                        <img class="platform" src="https://www.betaarchive.com/wiki/images/9/94/Pc-logo-png.png" alt="PC">
+                    </div>
+                    <div class="platform float-end" *ngIf="platform.toUpperCase() == 'XBOX'">
+                        <img class="platform" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg" alt="XBOX">      
+                    </div>
+                    <div class="platform float-end" *ngIf="platform.toUpperCase() == 'PLAYSTATION'">
+                        <img class="platform" src="https://www.nicepng.com/png/full/10-104138_blue-playstation-logo-png-playstation-logo-no-background.png" alt="PlayStation">      
+                    </div>
+                    <div class="platform float-end" *ngIf="platform.toUpperCase() == 'NINTENDO'">
+                        <img class="platform" src="https://logo-marque.com/wp-content/uploads/2020/11/Nintendo-Logo-1970-1975.png" alt="Nintendo">      
+                    </div>
+                </div>
             </div>
-            <div class="platform" *ngIf="platform == 'XBOX'">
-                <img class="platform" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg" alt="XBOX">      
+            <br>
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    Editeur: <br>{{ editor }}
+                </div>
+                <div class="col-12 col-sm-6">
+                    Date de Sortie: <br>{{ releaseDate }}
+                </div>
+                <div class="col-12 col-sm-6">
+                    Age: {{ age }}
+                </div>
+                <div class="col-12 col-sm-6">
+                    Genre: {{ genre }}
+                </div>
             </div>
-            <div class="platform" *ngIf="platform == 'PlayStation'">
-                <img class="platform" src="https://www.nicepng.com/png/full/10-104138_blue-playstation-logo-png-playstation-logo-no-background.png" alt="PlayStation">      
-            </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-12 col-sm-6">
-            <h3 [ngStyle]="{color: changeColor()}">{{ name }}</h3>
-        </div>
-        <div class="col-12 col-sm-6">
-            Date de Sortie: {{ releaseDate }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-sm-6">
-            Editeur: {{ editor }}
-            Genre: {{ genre }}
-        </div>
-        <div class="col-12 col-sm-6">
-            Age: {{ age }}
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12 col-sm-6">
-            Description: {{ description }}
-        </div>
-    </div>
+    <br>
     
-    <a [routerLink]="['/detail', id]" class="btn btn-outline-success">Détail</a>
-
-    <div class="col-2">
-        <a [routerLink]="['/modify', id]" class="btn btn-warning">M</a>
-        <button class="btn btn-danger" (click)="delete()">X</button>
+    <div class="row button-action">
+        <div class="col-9">
+            <a [routerLink]="['/detail', id]" class="btn btn-outline-success">Détail</a>
+        </div>   
+        <div class="col-3">
+            <button class="btn btn-danger float-end" (click)="delete()">X</button>
+            <a [routerLink]="['/modify', id]" class="btn btn-secondary float-end">Edit</a>
+        </div>
     </div>
-</li>
+</div>
