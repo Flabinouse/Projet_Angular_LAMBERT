@@ -3,12 +3,14 @@
       <div class="form-group">
         <label>Titre</label><br>
         <input type="text" class="form-control" [(ngModel)]="game.name">
+        <span *ngIf="game.name === '' && verifPost" class="red" id="name">Veuillez saisir un titre !</span>
       </div>
     </div>
     <div class="col-12 col-sm-6">
       <div class="form-group">
         <label>Plateforme</label><br>
         <input type="text" class="form-control" [(ngModel)]="game.platform">
+        <span *ngIf="game.platform === '' && verifPost" class="red" id="platform">Veuillez saisir une plateforme !</span>
       </div>
     </div>
   </div>
@@ -18,12 +20,14 @@
       <div class="form-group">
         <label>Editeur</label><br>
         <input type="text" class="form-control" [(ngModel)]="game.editor">
+        <span *ngIf="game.editor === '' && verifPost" class="red" id="editor">Veuillez saisir un éditeur !</span>
       </div>
     </div>
     <div class="col-12 col-sm-6">
       <div class="form-group">
         <label>Type de jeu</label><br>
         <input type="text" class="form-control" [(ngModel)]="game.genre">
+        <span *ngIf="game.genre === '' && verifPost" class="red" id="genre">Veuillez saisir un type de jeu !</span>
       </div>
     </div>
   </div>
@@ -33,12 +37,14 @@
       <div class="form-group">
         <label>Affiche</label> <br>
         <input type="text" class="form-control" [(ngModel)]="game.cover">
+        <span *ngIf="game.cover === '' && verifPost" class="red" id="cover">Veuillez saisir une affiche !</span>
       </div>
     </div>
     <div class="col-12 col-sm-6">
       <div class="form-group">
         <label>Date de sortie</label><br>
         <input type="text" class="form-control" [(ngModel)]="game.releaseDate">
+        <span *ngIf="game.releaseDate === '' && verifPost" class="red" id="date">Veuillez saisir une date de sortie !</span>
       </div>
     </div>
   </div>
@@ -48,6 +54,7 @@
       <div class="form-group">
         <label>Age limite</label> <br>
         <input type="text" class="form-control" [(ngModel)]="game.age">
+        <span *ngIf="game.age === '' && verifPost" class="red" id="age">Veuillez saisir un age limite !</span>
       </div>
     </div>
     <div class="col-12 col-sm-6">
@@ -58,6 +65,7 @@
       <div class="form-group">
         <label>Description</label><br>
         <textarea name="synopsis" cols="30" rows="10" class="form-control" [(ngModel)]="game.description"></textarea>
+        <span *ngIf="game.description === '' && verifPost" class="red" id="description">Veuillez saisir une description !</span>
       </div>
     </div>
   </div>

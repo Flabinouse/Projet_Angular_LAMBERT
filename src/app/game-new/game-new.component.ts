@@ -10,6 +10,8 @@ import { GameService } from '../services/game/game.service';
 export class GameNewComponent implements OnInit {
 
   public game!: Game;
+  public verifPost : boolean = false;
+  public verifAllPost!: boolean;
 
   constructor(
     private Game: GameService
@@ -20,9 +22,15 @@ export class GameNewComponent implements OnInit {
   }
 
   add() {
-    this.Game.newGame(this.game).subscribe(() => {
-      this.game = new Game();
-    });
+    this.verifPost = true;
+    if(this.game.cover === '' || this.game.platform === '' || this.game.name === '' || this.game.genre === '' || this.game.editor === '' || this.game.releaseDate === '' || this.game.description === '' || this.game.age === '') {
+      alert('Veuillez remplir tous les champs');
+    } else {
+      this.Game.newGame(this.game).subscribe(() => {
+        alert('Votre jeu a bien été ajouté');
+        this.game = new Game();
+        this.verifPost = false;
+      });
+    }
   }
-
 }
