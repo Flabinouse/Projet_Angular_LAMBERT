@@ -4,6 +4,7 @@
 
 body {
     background-image: url('assets/img/background.jpg');
+    background-attachment: fixed;
     color: aliceblue;
     font-family: Arial, Helvetica, sans-serif;
 }

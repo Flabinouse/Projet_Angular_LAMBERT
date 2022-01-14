@@ -36,7 +36,9 @@ export class GameComponent implements OnInit {
   }
 
   delete(){
-    this.Game.deleteGame(this.id);
+    if(confirm("Voulez-vous vraiment supprimer ce jeu ?")){
+      this.Game.deleteGame(this.id);
+    }
   }
 
 }
